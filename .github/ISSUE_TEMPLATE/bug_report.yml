@@ -1,0 +1,48 @@
+name: Something doesn't work
+description: Report a problem with Pinwheel for Windows.
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead. Screenshots help.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen again
+      description: The steps, and the kind of file (for example "a 4K MOV from an iPhone", "a 30-page scanned PDF").
+      placeholder: |
+        1. Drag a … file in File Explorer
+        2. Press Ctrl, point at …
+        3. …
+  - type: input
+    id: version
+    attributes:
+      label: Pinwheel version
+      description: About Pinwheel (tray menu) shows it, for example "Version 0.1.0 (8560a65)".
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version and PC
+      description: Settings → System → About, for example "Windows 11 24H2, x64, Dell XPS 13". Say if you use more than one monitor or display scaling above 100 %.
+    validations:
+      required: true
+  - type: dropdown
+    id: download
+    attributes:
+      label: Which download
+      options:
+        - win-x64
+        - win-arm64
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: The day's file from %LOCALAPPDATA%\Pinwheel\Logs (drag it here). It holds file names and folder paths, never the contents of your files; check it before you share it.
